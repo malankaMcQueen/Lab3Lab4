@@ -10,7 +10,7 @@ class GameInfoServiceApplicationTests {
 
   @Test
   void contextLoads() {
-    assertTrue(true, "This will always pass");
+    assertTrue(true, "This will always ");
   }
 
 }
