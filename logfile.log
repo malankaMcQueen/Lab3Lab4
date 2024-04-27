@@ -1,0 +1,191 @@
+2024-04-27 01:02:13.488 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 263391 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-27 01:02:13.491 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 01:02:14.057 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 01:02:14.100 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
+2024-04-27 01:02:14.623 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 01:02:14.643 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-27 01:02:14.645 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 01:02:14.645 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-27 01:02:14.676 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 01:02:14.677 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1133 ms
+2024-04-27 01:02:14.808 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-27 01:02:14.850 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-27 01:02:14.890 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-27 01:02:15.063 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 01:02:15.084 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 01:02:15.189 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@79b63325
+2024-04-27 01:02:15.191 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 01:02:15.869 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-27 01:02:15.922 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 01:02:15.936 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-27 01:02:16.149 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-27 01:02:16.800 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-27 01:02:16.952 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-27 01:02:16.962 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 01:02:16.968 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 3.774 seconds (process running for 4.351)
+2024-04-27 01:02:22.705 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 01:02:22.705 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 01:02:22.706 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-27 01:02:22.747 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(Genre com.example.gameinfoservice.service.GenreService.findGenreByName(String)) findGenreByName() - [Genree]
+
+2024-04-27 01:02:22.818 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(Genre com.example.gameinfoservice.service.GenreService.findGenreByName(String))() - Genre(id=1, name=Genree, games=[])
+2024-04-27 01:02:23.432 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - >> execution(Genre com.example.gameinfoservice.service.GenreService.findGenreByName(String)) findGenreByName() - [Genree]
+
+2024-04-27 01:02:23.433 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - << execution(Genre com.example.gameinfoservice.service.GenreService.findGenreByName(String))() - Genre(id=1, name=Genree, games=[])
+2024-04-27 01:03:11.516 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-27 01:03:11.516 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 01:03:11.518 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 01:03:11.521 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 10:10:24.941 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 276155 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-27 10:10:24.943 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 10:10:25.732 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 10:10:25.800 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+2024-04-27 10:10:26.639 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 10:10:26.653 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-27 10:10:26.655 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 10:10:26.656 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-27 10:10:26.716 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 10:10:26.716 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1695 ms
+2024-04-27 10:10:26.931 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-27 10:10:26.995 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-27 10:10:27.033 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-27 10:10:27.299 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 10:10:27.331 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 10:10:27.508 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6cf047cf
+2024-04-27 10:10:27.511 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 10:10:28.392 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-27 10:10:28.456 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 10:10:28.465 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-27 10:10:28.679 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-27 10:10:29.339 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-27 10:10:29.486 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-27 10:10:29.496 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 10:10:29.502 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 4.998 seconds (process running for 5.885)
+2024-04-27 10:11:01.545 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 10:11:01.546 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 10:11:01.547 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-27 10:11:01.613 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - >> execution(Genre com.example.gameinfoservice.service.GenreService.findGenreByName(String)) findGenreByName() - [Genree]
+
+2024-04-27 10:11:01.731 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - << execution(Genre com.example.gameinfoservice.service.GenreService.findGenreByName(String))() - Genre(id=1, name=Genree, games=[])
+2024-04-27 10:11:50.271 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-27 10:11:50.272 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 10:11:50.275 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 10:11:50.281 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 10:15:20.024 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 278392 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-27 10:15:20.027 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 10:15:20.807 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 10:15:20.879 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
+2024-04-27 10:15:21.720 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 10:15:21.732 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-27 10:15:21.734 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 10:15:21.735 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-27 10:15:21.787 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 10:15:21.787 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1697 ms
+2024-04-27 10:15:21.999 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-27 10:15:22.061 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-27 10:15:22.105 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-27 10:15:22.396 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 10:15:22.429 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 10:15:22.613 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@432c0f1
+2024-04-27 10:15:22.615 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 10:15:23.566 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-27 10:15:23.628 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 10:15:23.638 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-27 10:15:23.898 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-27 10:15:24.552 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-27 10:15:24.702 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-27 10:15:24.712 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 10:15:24.719 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 5.125 seconds (process running for 6.012)
+2024-04-27 10:15:27.318 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-27 10:15:27.318 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 10:15:27.320 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 10:15:27.324 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 10:19:30.078 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 280196 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-27 10:19:30.081 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 10:19:30.846 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 10:19:30.916 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2024-04-27 10:19:31.745 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 10:19:31.774 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-27 10:19:31.776 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 10:19:31.777 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-27 10:19:31.830 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 10:19:31.830 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1679 ms
+2024-04-27 10:19:32.046 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-27 10:19:32.109 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-27 10:19:32.155 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-27 10:19:32.457 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 10:19:32.490 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 10:19:32.670 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31ab4859
+2024-04-27 10:19:32.672 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 10:19:33.814 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-27 10:19:33.915 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 10:19:33.930 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-27 10:19:34.301 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-27 10:19:35.296 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-27 10:19:35.483 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-27 10:19:35.495 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 10:19:35.503 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 5.884 seconds (process running for 6.74)
+2024-04-27 10:19:43.872 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 10:19:43.873 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 10:19:43.875 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-27 10:19:43.928 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest)) globalExceptionHandler() - [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui/index.html., ServletWebRequest: uri=/swagger-ui/index.html;client=127.0.0.1]
+
+2024-04-27 10:19:43.928 [http-nio-8080-exec-1] ERROR c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - 
+2024-04-27 10:19:43.933 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - <500 INTERNAL_SERVER_ERROR Internal Server Error,ErrorMessage[statusCode=500, timestamp=Sat Apr 27 10:19:43 MSK 2024, message=No static resource swagger-ui/index.html., description=uri=/swagger-ui/index.html],[]>
+2024-04-27 10:19:44.123 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest)) globalExceptionHandler() - [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico., ServletWebRequest: uri=/favicon.ico;client=127.0.0.1]
+
+2024-04-27 10:19:44.123 [http-nio-8080-exec-2] ERROR c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - 
+2024-04-27 10:19:44.124 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - <500 INTERNAL_SERVER_ERROR Internal Server Error,ErrorMessage[statusCode=500, timestamp=Sat Apr 27 10:19:44 MSK 2024, message=No static resource favicon.ico., description=uri=/favicon.ico],[]>
+2024-04-27 10:20:10.938 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest)) globalExceptionHandler() - [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui/index.html., ServletWebRequest: uri=/swagger-ui/index.html;client=127.0.0.1]
+
+2024-04-27 10:20:10.938 [http-nio-8080-exec-3] ERROR c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - 
+2024-04-27 10:20:10.938 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - <500 INTERNAL_SERVER_ERROR Internal Server Error,ErrorMessage[statusCode=500, timestamp=Sat Apr 27 10:20:10 MSK 2024, message=No static resource swagger-ui/index.html., description=uri=/swagger-ui/index.html],[]>
+2024-04-27 10:20:10.987 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest)) globalExceptionHandler() - [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico., ServletWebRequest: uri=/favicon.ico;client=127.0.0.1]
+
+2024-04-27 10:20:10.987 [http-nio-8080-exec-4] ERROR c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - 
+2024-04-27 10:20:10.988 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - <500 INTERNAL_SERVER_ERROR Internal Server Error,ErrorMessage[statusCode=500, timestamp=Sat Apr 27 10:20:10 MSK 2024, message=No static resource favicon.ico., description=uri=/favicon.ico],[]>
+2024-04-27 10:20:14.978 [http-nio-8080-exec-5] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest)) globalExceptionHandler() - [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui/index.html., ServletWebRequest: uri=/swagger-ui/index.html;client=127.0.0.1]
+
+2024-04-27 10:20:14.978 [http-nio-8080-exec-5] ERROR c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - 
+2024-04-27 10:20:14.978 [http-nio-8080-exec-5] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - <500 INTERNAL_SERVER_ERROR Internal Server Error,ErrorMessage[statusCode=500, timestamp=Sat Apr 27 10:20:14 MSK 2024, message=No static resource swagger-ui/index.html., description=uri=/swagger-ui/index.html],[]>
+2024-04-27 10:20:15.020 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest)) globalExceptionHandler() - [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico., ServletWebRequest: uri=/favicon.ico;client=127.0.0.1]
+
+2024-04-27 10:20:15.020 [http-nio-8080-exec-6] ERROR c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - 
+2024-04-27 10:20:15.021 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - <500 INTERNAL_SERVER_ERROR Internal Server Error,ErrorMessage[statusCode=500, timestamp=Sat Apr 27 10:20:15 MSK 2024, message=No static resource favicon.ico., description=uri=/favicon.ico],[]>
+2024-04-27 10:22:34.290 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-27 10:22:34.291 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 10:22:34.293 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 10:22:34.297 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 10:26:42.584 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 282579 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-27 10:26:42.586 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 10:26:43.526 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 10:26:43.594 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+2024-04-27 10:26:44.459 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 10:26:44.472 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-27 10:26:44.474 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 10:26:44.474 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-27 10:26:44.543 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 10:26:44.544 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1881 ms
+2024-04-27 10:26:44.774 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-27 10:26:44.837 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-27 10:26:44.875 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-27 10:26:45.159 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 10:26:45.190 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 10:26:45.369 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d1f23a0
+2024-04-27 10:26:45.371 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 10:26:46.370 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-27 10:26:46.441 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 10:26:46.451 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-27 10:26:46.685 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-27 10:26:47.737 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-27 10:26:47.963 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-27 10:26:47.974 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 10:26:47.982 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 5.817 seconds (process running for 6.71)
+2024-04-27 10:26:52.230 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 10:26:52.230 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 10:26:52.232 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-04-27 10:26:53.054 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 329 ms
+2024-04-27 10:28:27.820 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-27 10:28:27.821 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 10:28:27.824 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 10:28:27.831 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
