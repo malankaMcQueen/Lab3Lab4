@@ -189,3 +189,963 @@
 2024-04-27 10:28:27.821 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-04-27 10:28:27.824 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-04-27 10:28:27.831 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-30 22:09:24.677 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 149222 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 22:09:24.679 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 22:09:25.355 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 22:09:25.412 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2024-04-30 22:09:25.993 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 22:09:26.043 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1327 ms
+2024-04-30 22:09:26.189 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30 22:09:26.254 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-30 22:09:26.283 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-30 22:09:26.482 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30 22:09:26.505 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-30 22:09:27.577 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.gameinfoservice.GameInfoServiceApplication.main(GameInfoServiceApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 49 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 52 common frames omitted
+2024-04-30 22:09:27.581 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.gameinfoservice.GameInfoServiceApplication.main(GameInfoServiceApplication.java:10)
+2024-04-30 22:09:27.583 [main] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-04-30 22:09:27.584 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-04-30 22:10:02.990 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 149437 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 22:10:02.992 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 22:10:03.912 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 22:10:03.986 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2024-04-30 22:10:04.821 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 22:10:04.834 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 22:10:04.836 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 22:10:04.836 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 22:10:04.890 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 22:10:04.890 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1839 ms
+2024-04-30 22:10:04.976 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+2024-04-30 22:10:04.979 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-30 22:10:05.000 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-30 22:10:05.028 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.gameinfoservice.GameInfoServiceApplication.main(GameInfoServiceApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 35 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.util.Assert.state(Assert.java:97)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:175)
+	at org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:55)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:117)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 36 common frames omitted
+2024-04-30 22:10:13.761 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 149570 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 22:10:13.764 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 22:10:14.666 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 22:10:14.733 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+2024-04-30 22:10:15.540 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 22:10:15.553 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 22:10:15.556 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 22:10:15.556 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 22:10:15.612 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 22:10:15.613 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1784 ms
+2024-04-30 22:10:15.697 [main] ERROR com.zaxxer.hikari.HikariConfig - Failed to load driver class org.postgresql.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a
+2024-04-30 22:10:15.700 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
+2024-04-30 22:10:15.703 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-30 22:10:15.724 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-30 22:10:15.742 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.gameinfoservice.GameInfoServiceApplication.main(GameInfoServiceApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 35 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:488)
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:479)
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:373)
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:59)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:117)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 36 common frames omitted
+2024-04-30 22:15:01.662 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 150406 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 22:15:01.664 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 22:15:02.538 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 22:15:02.607 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+2024-04-30 22:15:03.429 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 22:15:03.441 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 22:15:03.444 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 22:15:03.444 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 22:15:03.503 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 22:15:03.503 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1778 ms
+2024-04-30 22:15:03.589 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+2024-04-30 22:15:03.592 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-30 22:15:03.614 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-30 22:15:03.635 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.gameinfoservice.GameInfoServiceApplication.main(GameInfoServiceApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 35 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.util.Assert.state(Assert.java:97)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:175)
+	at org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:55)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:117)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 36 common frames omitted
+2024-04-30 22:15:26.701 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 150686 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 22:15:26.704 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 22:15:27.613 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 22:15:27.680 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+2024-04-30 22:15:28.469 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 22:15:28.481 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 22:15:28.484 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 22:15:28.484 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 22:15:28.535 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 22:15:28.535 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1761 ms
+2024-04-30 22:15:28.717 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30 22:15:28.779 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-30 22:15:28.808 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-30 22:15:29.015 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30 22:15:29.038 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-30 22:15:29.174 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@280d5a82
+2024-04-30 22:15:29.175 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-30 22:15:29.881 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-30 22:15:29.968 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 22:15:29.976 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-30 22:15:30.186 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-30 22:15:31.173 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-30 22:15:31.392 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-30 22:15:31.403 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-30 22:15:31.410 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 5.118 seconds (process running for 6.054)
+2024-04-30 22:34:50.805 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-30 22:34:50.805 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 22:34:50.809 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-30 22:34:50.816 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-30 22:34:57.222 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 154969 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 22:34:57.224 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 22:34:58.177 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 22:34:58.248 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2024-04-30 22:34:59.041 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 22:34:59.052 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 22:34:59.054 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 22:34:59.054 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 22:34:59.100 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 22:34:59.100 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1810 ms
+2024-04-30 22:34:59.265 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30 22:34:59.322 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-30 22:34:59.352 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-30 22:34:59.551 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30 22:34:59.572 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-30 22:34:59.689 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1de08775
+2024-04-30 22:34:59.690 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-30 22:35:00.403 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-30 22:35:00.456 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 22:35:00.465 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-30 22:35:00.695 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-30 22:35:01.725 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-30 22:35:01.964 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-30 22:35:01.976 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-30 22:35:01.985 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 5.216 seconds (process running for 6.124)
+2024-04-30 22:35:15.536 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-30 22:35:15.536 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-30 22:35:15.537 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-30 22:35:15.682 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Game3, description=Some description, genre=null)]
+
+2024-04-30 22:35:15.866 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - true
+2024-04-30 22:35:17.279 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Game3, description=Some description, genre=null)]
+
+2024-04-30 22:35:17.295 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - true
+2024-04-30 22:35:30.236 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest)) globalExceptionHandler() - [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource game., ServletWebRequest: uri=/game/;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 22:35:30.237 [http-nio-8080-exec-4] ERROR c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - 
+2024-04-30 22:35:30.238 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - <500 INTERNAL_SERVER_ERROR Internal Server Error,ErrorMessage[statusCode=500, timestamp=Tue Apr 30 22:35:30 MSK 2024, message=No static resource game., description=uri=/game/],[]>
+2024-04-30 22:35:32.803 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - >> execution(List com.example.gameinfoservice.service.GameService.getAllGames()) getAllGames() - []
+
+2024-04-30 22:35:32.835 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - << execution(List com.example.gameinfoservice.service.GameService.getAllGames())() - [Game(id=1, name=Game3, description=Some description, genre=[]), Game(id=2, name=Game3, description=Some description, genre=[]), Game(id=3, name=Game3, description=Some description, genre=[])]
+2024-04-30 22:35:45.379 [http-nio-8080-exec-7] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Game3, description=Some description, genre=null)]
+
+2024-04-30 22:35:45.395 [http-nio-8080-exec-7] INFO  c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - true
+2024-04-30 22:35:46.337 [http-nio-8080-exec-8] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Game3, description=Some description, genre=null)]
+
+2024-04-30 22:35:46.352 [http-nio-8080-exec-8] INFO  c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - true
+2024-04-30 22:35:47.068 [http-nio-8080-exec-9] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Game3, description=Some description, genre=null)]
+
+2024-04-30 22:35:47.082 [http-nio-8080-exec-9] INFO  c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - true
+2024-04-30 22:36:17.890 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-30 22:36:17.891 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 22:36:17.894 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-30 22:36:17.898 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-30 23:15:05.640 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 163284 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 23:15:05.642 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 23:15:06.574 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 23:15:06.648 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2024-04-30 23:15:07.506 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 23:15:07.518 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:15:07.521 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 23:15:07.521 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 23:15:07.597 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 23:15:07.597 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1884 ms
+2024-04-30 23:15:07.813 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30 23:15:07.885 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-30 23:15:07.926 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-30 23:15:08.213 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30 23:15:08.244 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-30 23:15:08.425 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@280d5a82
+2024-04-30 23:15:08.428 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-30 23:15:09.576 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-30 23:15:09.666 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:15:09.681 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-30 23:15:10.052 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-30 23:15:11.748 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-30 23:15:12.107 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:15:12.124 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-30 23:15:12.135 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 6.946 seconds (process running for 8.0)
+2024-04-30 23:15:17.716 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-30 23:15:17.716 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-30 23:15:17.718 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-30 23:15:17.771 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - >> execution(List com.example.gameinfoservice.service.GameService.getAllGames()) getAllGames() - []
+
+2024-04-30 23:15:17.887 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - << execution(List com.example.gameinfoservice.service.GameService.getAllGames())() - [Game(id=1, name=Game3, description=Some description, genre=[]), Game(id=2, name=Game3, description=Some description, genre=[]), Game(id=3, name=Game3, description=Some description, genre=[]), Game(id=4, name=Game3, description=Some description, genre=[]), Game(id=5, name=Game3, description=Some description, genre=[]), Game(id=6, name=Game3, description=Some description, genre=[])]
+2024-04-30 23:15:26.783 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Ga, description=Some description, genre=null)]
+
+2024-04-30 23:15:26.857 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - true
+2024-04-30 23:15:31.864 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(List com.example.gameinfoservice.service.GameService.getAllGames()) getAllGames() - []
+
+2024-04-30 23:15:31.869 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - << execution(List com.example.gameinfoservice.service.GameService.getAllGames())() - [Game(id=1, name=Game3, description=Some description, genre=[]), Game(id=2, name=Game3, description=Some description, genre=[]), Game(id=3, name=Game3, description=Some description, genre=[]), Game(id=4, name=Game3, description=Some description, genre=[]), Game(id=5, name=Game3, description=Some description, genre=[]), Game(id=6, name=Game3, description=Some description, genre=[]), Game(id=7, name=Ga, description=Some description, genre=[])]
+2024-04-30 23:15:36.781 [http-nio-8080-exec-5] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Ga, description=Some description, genre=null)]
+
+2024-04-30 23:15:36.796 [http-nio-8080-exec-5] INFO  c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - true
+2024-04-30 23:15:41.464 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - >> execution(List com.example.gameinfoservice.service.GameService.getAllGames()) getAllGames() - []
+
+2024-04-30 23:15:41.469 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - << execution(List com.example.gameinfoservice.service.GameService.getAllGames())() - [Game(id=1, name=Game3, description=Some description, genre=[]), Game(id=2, name=Game3, description=Some description, genre=[]), Game(id=3, name=Game3, description=Some description, genre=[]), Game(id=4, name=Game3, description=Some description, genre=[]), Game(id=5, name=Game3, description=Some description, genre=[]), Game(id=6, name=Game3, description=Some description, genre=[]), Game(id=7, name=Ga, description=Some description, genre=[]), Game(id=8, name=Ga, description=Some description, genre=[])]
+2024-04-30 23:16:38.669 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-30 23:16:38.670 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:16:38.674 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-30 23:16:38.693 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-30 23:16:42.924 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 164056 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 23:16:42.926 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 23:16:43.810 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 23:16:43.878 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+2024-04-30 23:16:44.698 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 23:16:44.710 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:16:44.712 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 23:16:44.713 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 23:16:44.770 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 23:16:44.770 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1780 ms
+2024-04-30 23:16:44.979 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30 23:16:45.051 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-30 23:16:45.091 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-30 23:16:45.378 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30 23:16:45.410 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-30 23:16:45.588 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43b6cb1c
+2024-04-30 23:16:45.590 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-30 23:16:46.691 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-30 23:16:46.779 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:16:46.791 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-30 23:16:47.069 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-30 23:16:48.138 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-30 23:16:48.366 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:16:48.378 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-30 23:16:48.385 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 5.903 seconds (process running for 6.806)
+2024-04-30 23:16:55.492 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-30 23:16:55.492 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-30 23:16:55.494 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-30 23:16:55.630 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Ga, description=Some description, genre=null)]
+
+2024-04-30 23:16:55.631 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.repository.GameRepository.findGameByName(String)) findGameByName() - [Ga]
+
+2024-04-30 23:16:55.735 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.repository.GameRepository.findGameByName(String))() - null
+2024-04-30 23:16:55.789 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - true
+2024-04-30 23:18:28.149 [http-nio-8080-exec-5] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Ga]
+
+2024-04-30 23:18:28.150 [http-nio-8080-exec-5] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Game(id=9, name=Ga, description=Some description, genre=null)
+2024-04-30 23:19:08.304 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-30 23:19:08.304 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:19:08.307 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-30 23:19:08.313 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-30 23:19:10.736 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 164992 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 23:19:10.739 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 23:19:11.649 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 23:19:11.719 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2024-04-30 23:19:12.544 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 23:19:12.568 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:19:12.570 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 23:19:12.571 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 23:19:12.627 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 23:19:12.628 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1811 ms
+2024-04-30 23:19:12.863 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30 23:19:12.929 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-30 23:19:12.969 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-30 23:19:13.238 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30 23:19:13.269 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-30 23:19:13.463 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@280d5a82
+2024-04-30 23:19:13.465 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-30 23:19:14.608 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-30 23:19:14.705 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:19:14.720 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-30 23:19:15.058 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-30 23:19:16.788 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-30 23:19:17.171 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:19:17.189 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-30 23:19:17.202 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 6.916 seconds (process running for 7.797)
+2024-04-30 23:19:18.277 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-30 23:19:18.277 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-30 23:19:18.279 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-04-30 23:19:18.343 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Ga]
+
+2024-04-30 23:19:18.344 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.repository.GameRepository.findGameByName(String)) findGameByName() - [Ga]
+
+2024-04-30 23:19:18.447 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.repository.GameRepository.findGameByName(String))() - null
+2024-04-30 23:19:18.448 [http-nio-8080-exec-1] ERROR c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Game with name: Gadoesnt exist
+2024-04-30 23:19:18.452 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.resourceNotFoundException(ResourceNotFoundException,WebRequest)) resourceNotFoundException() - [com.example.gameinfoservice.exception.ResourceNotFoundException: Game with name: Gadoesnt exist, ServletWebRequest: uri=/game/getByName;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:19:18.453 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.resourceNotFoundException(ResourceNotFoundException,WebRequest))() - <404 NOT_FOUND Not Found,ErrorMessage[statusCode=404, timestamp=Tue Apr 30 23:19:18 MSK 2024, message=Game with name: Gadoesnt exist, description=uri=/game/getByName],[]>
+2024-04-30 23:19:31.524 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Ga]
+
+2024-04-30 23:19:31.525 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.repository.GameRepository.findGameByName(String)) findGameByName() - [Ga]
+
+2024-04-30 23:19:31.528 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.repository.GameRepository.findGameByName(String))() - null
+2024-04-30 23:19:31.529 [http-nio-8080-exec-3] ERROR c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Game with name: Gadoesnt exist
+2024-04-30 23:19:31.529 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.resourceNotFoundException(ResourceNotFoundException,WebRequest)) resourceNotFoundException() - [com.example.gameinfoservice.exception.ResourceNotFoundException: Game with name: Gadoesnt exist, ServletWebRequest: uri=/game/getByName;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:19:31.530 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.resourceNotFoundException(ResourceNotFoundException,WebRequest))() - <404 NOT_FOUND Not Found,ErrorMessage[statusCode=404, timestamp=Tue Apr 30 23:19:31 MSK 2024, message=Game with name: Gadoesnt exist, description=uri=/game/getByName],[]>
+2024-04-30 23:19:32.092 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Ga]
+
+2024-04-30 23:19:32.093 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.repository.GameRepository.findGameByName(String)) findGameByName() - [Ga]
+
+2024-04-30 23:19:32.095 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.repository.GameRepository.findGameByName(String))() - null
+2024-04-30 23:19:32.095 [http-nio-8080-exec-4] ERROR c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Game with name: Gadoesnt exist
+2024-04-30 23:19:32.096 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.resourceNotFoundException(ResourceNotFoundException,WebRequest)) resourceNotFoundException() - [com.example.gameinfoservice.exception.ResourceNotFoundException: Game with name: Gadoesnt exist, ServletWebRequest: uri=/game/getByName;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:19:32.096 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.resourceNotFoundException(ResourceNotFoundException,WebRequest))() - <404 NOT_FOUND Not Found,ErrorMessage[statusCode=404, timestamp=Tue Apr 30 23:19:32 MSK 2024, message=Game with name: Gadoesnt exist, description=uri=/game/getByName],[]>
+2024-04-30 23:20:09.986 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-30 23:20:09.987 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:20:09.991 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-30 23:20:09.999 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-30 23:20:13.765 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 165579 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 23:20:13.768 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 23:20:14.705 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 23:20:14.775 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2024-04-30 23:20:15.623 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 23:20:15.647 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:20:15.649 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 23:20:15.650 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 23:20:15.705 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 23:20:15.706 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1865 ms
+2024-04-30 23:20:15.938 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30 23:20:15.999 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-30 23:20:16.038 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-30 23:20:16.315 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30 23:20:16.345 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-30 23:20:16.507 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@21a5b599
+2024-04-30 23:20:16.509 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-30 23:20:17.392 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-30 23:20:17.454 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:20:17.464 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-30 23:20:17.676 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-30 23:20:18.711 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-30 23:20:18.935 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:20:18.947 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-30 23:20:18.954 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 5.62 seconds (process running for 6.485)
+2024-04-30 23:20:21.310 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-30 23:20:21.310 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-30 23:20:21.312 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-04-30 23:20:21.374 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Ga]
+
+2024-04-30 23:20:21.375 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.repository.GameRepository.findGameByName(String)) findGameByName() - [Ga]
+
+2024-04-30 23:20:21.480 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.repository.GameRepository.findGameByName(String))() - null
+2024-04-30 23:20:21.481 [http-nio-8080-exec-1] ERROR c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Game with name: Gadoesnt exist
+2024-04-30 23:20:21.484 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.resourceNotFoundException(ResourceNotFoundException,WebRequest)) resourceNotFoundException() - [com.example.gameinfoservice.exception.ResourceNotFoundException: Game with name: Gadoesnt exist, ServletWebRequest: uri=/game/getByName;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:20:21.485 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.resourceNotFoundException(ResourceNotFoundException,WebRequest))() - <404 NOT_FOUND Not Found,ErrorMessage[statusCode=404, timestamp=Tue Apr 30 23:20:21 MSK 2024, message=Game with name: Gadoesnt exist, description=uri=/game/getByName],[]>
+2024-04-30 23:20:41.903 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-30 23:20:41.903 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:20:41.907 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-30 23:20:41.914 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-30 23:20:45.721 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 166169 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 23:20:45.723 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 23:20:46.651 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 23:20:46.721 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2024-04-30 23:20:47.575 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 23:20:47.587 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:20:47.589 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 23:20:47.589 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 23:20:47.647 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 23:20:47.647 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1859 ms
+2024-04-30 23:20:47.883 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30 23:20:47.948 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-30 23:20:47.989 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-30 23:20:48.275 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30 23:20:48.306 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-30 23:20:48.484 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6cc8adff
+2024-04-30 23:20:48.487 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-30 23:20:49.618 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-30 23:20:49.703 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:20:49.716 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-30 23:20:50.870 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-30 23:20:51.102 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:20:51.114 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-30 23:20:51.122 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 5.82 seconds (process running for 6.685)
+2024-04-30 23:20:53.414 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-30 23:20:53.414 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-30 23:20:53.416 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-30 23:20:53.481 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Ga]
+
+2024-04-30 23:20:53.656 [http-nio-8080-exec-2] ERROR c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Query did not return a unique result: 3 results were returned
+2024-04-30 23:20:53.659 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest)) globalExceptionHandler() - [org.springframework.dao.IncorrectResultSizeDataAccessException: Query did not return a unique result: 3 results were returned, ServletWebRequest: uri=/game/getByName;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:20:53.660 [http-nio-8080-exec-2] ERROR c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - 
+2024-04-30 23:20:53.661 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - <500 INTERNAL_SERVER_ERROR Internal Server Error,ErrorMessage[statusCode=500, timestamp=Tue Apr 30 23:20:53 MSK 2024, message=Query did not return a unique result: 3 results were returned, description=uri=/game/getByName],[]>
+2024-04-30 23:21:05.513 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Ga, description=Some description, genre=null)]
+
+2024-04-30 23:21:05.518 [http-nio-8080-exec-4] ERROR c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - Query did not return a unique result: 3 results were returned
+2024-04-30 23:21:05.518 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest)) globalExceptionHandler() - [org.springframework.dao.IncorrectResultSizeDataAccessException: Query did not return a unique result: 3 results were returned, ServletWebRequest: uri=/game/saveGame;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:21:05.519 [http-nio-8080-exec-4] ERROR c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - 
+2024-04-30 23:21:05.519 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - <500 INTERNAL_SERVER_ERROR Internal Server Error,ErrorMessage[statusCode=500, timestamp=Tue Apr 30 23:21:05 MSK 2024, message=Query did not return a unique result: 3 results were returned, description=uri=/game/saveGame],[]>
+2024-04-30 23:21:17.947 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Gea, description=Some description, genre=null)]
+
+2024-04-30 23:21:18.005 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - true
+2024-04-30 23:21:19.077 [http-nio-8080-exec-7] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Gea, description=Some description, genre=null)]
+
+2024-04-30 23:21:19.081 [http-nio-8080-exec-7] ERROR c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - Game with name Geaalready exist
+2024-04-30 23:21:19.082 [http-nio-8080-exec-7] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest)) badRequestException() - [com.example.gameinfoservice.exception.BadRequestException: Game with name Geaalready exist, ServletWebRequest: uri=/game/saveGame;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:21:19.082 [http-nio-8080-exec-7] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest))() - <400 BAD_REQUEST Bad Request,ErrorMessage[statusCode=400, timestamp=Tue Apr 30 23:21:19 MSK 2024, message=Game with name Geaalready exist, description=uri=/game/saveGame],[]>
+2024-04-30 23:22:40.874 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-30 23:22:40.875 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:22:40.879 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-30 23:22:40.884 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-30 23:22:44.764 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 166947 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 23:22:44.766 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 23:22:45.642 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 23:22:45.715 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2024-04-30 23:22:46.575 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 23:22:46.587 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:22:46.590 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 23:22:46.591 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 23:22:46.669 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 23:22:46.670 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1843 ms
+2024-04-30 23:22:46.891 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30 23:22:46.963 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-30 23:22:47.003 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-30 23:22:47.289 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30 23:22:47.323 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-30 23:22:47.502 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d1f23a0
+2024-04-30 23:22:47.504 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-30 23:22:48.642 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-30 23:22:48.731 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:22:48.745 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-30 23:22:49.121 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-30 23:22:50.642 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-30 23:22:50.931 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:22:50.944 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-30 23:22:50.953 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 6.615 seconds (process running for 7.479)
+2024-04-30 23:22:52.834 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-30 23:22:52.834 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-30 23:22:52.836 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-04-30 23:22:52.968 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Gea, description=Some description, genre=null)]
+
+2024-04-30 23:22:53.086 [http-nio-8080-exec-1] ERROR c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - Game with name Geaalready exist
+2024-04-30 23:22:53.089 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest)) badRequestException() - [com.example.gameinfoservice.exception.BadRequestException: Game with name Geaalready exist, ServletWebRequest: uri=/game/saveGame;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:22:53.091 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest))() - <400 BAD_REQUEST Bad Request,ErrorMessage[statusCode=400, timestamp=Tue Apr 30 23:22:53 MSK 2024, message=Game with name Geaalready exist, description=uri=/game/saveGame],[]>
+2024-04-30 23:23:05.392 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Ga]
+
+2024-04-30 23:23:05.403 [http-nio-8080-exec-4] ERROR c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Query did not return a unique result: 3 results were returned
+2024-04-30 23:23:05.404 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest)) globalExceptionHandler() - [org.springframework.dao.IncorrectResultSizeDataAccessException: Query did not return a unique result: 3 results were returned, ServletWebRequest: uri=/game/getByName;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:23:05.404 [http-nio-8080-exec-4] ERROR c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - 
+2024-04-30 23:23:05.404 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - <500 INTERNAL_SERVER_ERROR Internal Server Error,ErrorMessage[statusCode=500, timestamp=Tue Apr 30 23:23:05 MSK 2024, message=Query did not return a unique result: 3 results were returned, description=uri=/game/getByName],[]>
+2024-04-30 23:23:15.456 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Gea]
+
+2024-04-30 23:23:15.459 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Game(id=10, name=Gea, description=Some description, genre=[])
+2024-04-30 23:24:25.666 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-30 23:24:25.667 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:24:25.672 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-30 23:24:25.676 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-30 23:24:29.631 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 167704 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 23:24:29.633 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 23:24:30.544 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 23:24:30.616 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2024-04-30 23:24:31.456 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 23:24:31.468 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:24:31.470 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 23:24:31.470 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 23:24:31.526 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 23:24:31.527 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1830 ms
+2024-04-30 23:24:31.766 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30 23:24:31.829 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-30 23:24:31.867 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-30 23:24:32.149 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30 23:24:32.182 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-30 23:24:32.359 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51de5efa
+2024-04-30 23:24:32.362 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-30 23:24:33.497 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-30 23:24:33.578 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:24:33.591 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-30 23:24:33.890 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-30 23:24:35.059 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-30 23:24:35.294 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:24:35.306 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-30 23:24:35.314 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 6.106 seconds (process running for 6.99)
+2024-04-30 23:24:40.322 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-30 23:24:40.323 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-30 23:24:40.324 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-30 23:24:40.390 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Gea]
+
+2024-04-30 23:24:40.492 [http-nio-8080-exec-1] ERROR c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Game with name: Geadoesnt exist
+2024-04-30 23:24:40.496 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.resourceNotFoundException(ResourceNotFoundException,WebRequest)) resourceNotFoundException() - [com.example.gameinfoservice.exception.ResourceNotFoundException: Game with name: Geadoesnt exist, ServletWebRequest: uri=/game/getByName;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:24:40.497 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.resourceNotFoundException(ResourceNotFoundException,WebRequest))() - <404 NOT_FOUND Not Found,ErrorMessage[statusCode=404, timestamp=Tue Apr 30 23:24:40 MSK 2024, message=Game with name: Geadoesnt exist, description=uri=/game/getByName],[]>
+2024-04-30 23:25:29.942 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-30 23:25:29.943 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:25:29.946 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-30 23:25:29.950 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-30 23:25:33.845 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 168285 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-04-30 23:25:33.847 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-30 23:25:34.754 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30 23:25:34.826 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2024-04-30 23:25:35.698 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-30 23:25:35.711 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:25:35.713 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-30 23:25:35.714 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-30 23:25:35.771 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-30 23:25:35.771 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1858 ms
+2024-04-30 23:25:35.984 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30 23:25:36.057 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-30 23:25:36.097 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-30 23:25:36.378 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30 23:25:36.412 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-30 23:25:36.589 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1a34a51e
+2024-04-30 23:25:36.591 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-30 23:25:37.747 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-30 23:25:37.851 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:25:37.865 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-04-30 23:25:38.223 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-30 23:25:39.658 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-30 23:25:39.932 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-30 23:25:39.946 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-30 23:25:39.955 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 6.526 seconds (process running for 7.406)
+2024-04-30 23:25:40.013 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-30 23:25:40.013 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-30 23:25:40.014 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-30 23:25:40.055 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Gea]
+
+2024-04-30 23:25:40.137 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Game(id=10, name=Gea, description=Some description, genre=[])
+2024-04-30 23:25:43.140 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Gea]
+
+2024-04-30 23:25:43.140 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Game(id=10, name=Gea, description=Some description, genre=[])
+2024-04-30 23:25:46.455 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Gea, description=Some description, genre=null)]
+
+2024-04-30 23:25:46.461 [http-nio-8080-exec-4] ERROR c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - Game with name Geaalready exist
+2024-04-30 23:25:46.464 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest)) badRequestException() - [com.example.gameinfoservice.exception.BadRequestException: Game with name Geaalready exist, ServletWebRequest: uri=/game/saveGame;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:25:46.464 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest))() - <400 BAD_REQUEST Bad Request,ErrorMessage[statusCode=400, timestamp=Tue Apr 30 23:25:46 MSK 2024, message=Game with name Geaalready exist, description=uri=/game/saveGame],[]>
+2024-04-30 23:25:47.485 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Gea, description=Some description, genre=null)]
+
+2024-04-30 23:25:47.489 [http-nio-8080-exec-6] ERROR c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - Game with name Geaalready exist
+2024-04-30 23:25:47.489 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest)) badRequestException() - [com.example.gameinfoservice.exception.BadRequestException: Game with name Geaalready exist, ServletWebRequest: uri=/game/saveGame;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:25:47.490 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest))() - <400 BAD_REQUEST Bad Request,ErrorMessage[statusCode=400, timestamp=Tue Apr 30 23:25:47 MSK 2024, message=Game with name Geaalready exist, description=uri=/game/saveGame],[]>
+2024-04-30 23:25:52.590 [http-nio-8080-exec-7] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Gea1, description=Some description, genre=null)]
+
+2024-04-30 23:25:52.648 [http-nio-8080-exec-7] INFO  c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - true
+2024-04-30 23:25:53.612 [http-nio-8080-exec-8] INFO  c.e.g.aspect.LoggingAspect - >> execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [Game(id=null, name=Gea1, description=Some description, genre=null)]
+
+2024-04-30 23:25:53.615 [http-nio-8080-exec-8] ERROR c.e.g.aspect.LoggingAspect - << execution(boolean com.example.gameinfoservice.service.GameService.saveGame(Game))() - Game with name Gea1already exist
+2024-04-30 23:25:53.615 [http-nio-8080-exec-8] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest)) badRequestException() - [com.example.gameinfoservice.exception.BadRequestException: Game with name Gea1already exist, ServletWebRequest: uri=/game/saveGame;client=0:0:0:0:0:0:0:1]
+
+2024-04-30 23:25:53.616 [http-nio-8080-exec-8] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest))() - <400 BAD_REQUEST Bad Request,ErrorMessage[statusCode=400, timestamp=Tue Apr 30 23:25:53 MSK 2024, message=Game with name Gea1already exist, description=uri=/game/saveGame],[]>
+2024-04-30 23:26:26.088 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-04-30 23:26:26.089 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30 23:26:26.094 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-30 23:26:26.098 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-02 13:45:25.057 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 23397 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-05-02 13:45:25.061 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-02 13:45:26.159 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-02 13:45:26.233 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2024-05-02 13:45:27.101 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-05-02 13:45:27.113 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-02 13:45:27.115 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-02 13:45:27.116 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-05-02 13:45:27.173 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-02 13:45:27.173 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2027 ms
+2024-05-02 13:45:27.375 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-02 13:45:27.441 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-02 13:45:27.477 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-02 13:45:27.720 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-02 13:45:27.742 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-02 13:45:27.859 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@280d5a82
+2024-05-02 13:45:27.861 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-02 13:45:28.519 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-02 13:45:28.587 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 13:45:28.596 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-05-02 13:45:28.795 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-02 13:45:29.777 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-02 13:45:30.021 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-02 13:45:30.034 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-05-02 13:45:30.043 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 5.43 seconds (process running for 6.426)
+2024-05-02 13:46:56.376 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-02 13:46:56.376 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-02 13:46:56.378 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-05-02 13:46:56.452 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Gea]
+
+2024-05-02 13:46:56.567 [http-nio-8080-exec-1] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Game(id=10, name=Gea, description=Some description, genre=[])
+2024-05-02 13:47:20.141 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest)) globalExceptionHandler() - [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource game/addListGame., ServletWebRequest: uri=/game/addListGame;client=0:0:0:0:0:0:0:1]
+
+2024-05-02 13:47:20.141 [http-nio-8080-exec-2] ERROR c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - 
+2024-05-02 13:47:20.142 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.globalExceptionHandler(Exception,WebRequest))() - <500 INTERNAL_SERVER_ERROR Internal Server Error,ErrorMessage[statusCode=500, timestamp=Thu May 02 13:47:20 MSK 2024, message=No static resource game/addListGame., description=uri=/game/addListGame],[]>
+2024-05-02 13:47:34.236 [http-nio-8080-exec-5] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest)) badRequestException() - [com.example.gameinfoservice.exception.BadRequestException: Game with name Gea1already exist, ServletWebRequest: uri=/game/addListGames;client=0:0:0:0:0:0:0:1]
+
+2024-05-02 13:47:34.236 [http-nio-8080-exec-5] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest))() - <400 BAD_REQUEST Bad Request,ErrorMessage[statusCode=400, timestamp=Thu May 02 13:47:34 MSK 2024, message=Game with name Gea1already exist, description=uri=/game/addListGames],[]>
+2024-05-02 13:47:47.768 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.getByName(String)) getByName() - [Gea]
+
+2024-05-02 13:47:47.769 [http-nio-8080-exec-6] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.getByName(String))() - Game(id=10, name=Gea, description=Some description, genre=[])
+2024-05-02 13:47:53.971 [http-nio-8080-exec-8] INFO  c.e.g.aspect.LoggingAspect - >> execution(List com.example.gameinfoservice.service.GameService.getAllGames()) getAllGames() - []
+
+2024-05-02 13:47:54.007 [http-nio-8080-exec-8] INFO  c.e.g.aspect.LoggingAspect - << execution(List com.example.gameinfoservice.service.GameService.getAllGames())() - [Game(id=1, name=Game3, description=Some description, genre=[]), Game(id=2, name=Game3, description=Some description, genre=[]), Game(id=3, name=Game3, description=Some description, genre=[]), Game(id=4, name=Game3, description=Some description, genre=[]), Game(id=5, name=Game3, description=Some description, genre=[]), Game(id=6, name=Game3, description=Some description, genre=[]), Game(id=7, name=Ga, description=Some description, genre=[]), Game(id=8, name=Ga, description=Some description, genre=[]), Game(id=9, name=Ga, description=Some description, genre=[]), Game(id=10, name=Gea, description=Some description, genre=[]), Game(id=11, name=Gea1, description=Some description, genre=[])]
+2024-05-02 13:48:15.836 [http-nio-8080-exec-10] INFO  c.e.g.aspect.LoggingAspect - >> execution(List com.example.gameinfoservice.service.GameService.getAllGames()) getAllGames() - []
+
+2024-05-02 13:48:15.842 [http-nio-8080-exec-10] INFO  c.e.g.aspect.LoggingAspect - << execution(List com.example.gameinfoservice.service.GameService.getAllGames())() - [Game(id=1, name=Game3, description=Some description, genre=[]), Game(id=2, name=Game3, description=Some description, genre=[]), Game(id=3, name=Game3, description=Some description, genre=[]), Game(id=4, name=Game3, description=Some description, genre=[]), Game(id=5, name=Game3, description=Some description, genre=[]), Game(id=6, name=Game3, description=Some description, genre=[]), Game(id=7, name=Ga, description=Some description, genre=[]), Game(id=8, name=Ga, description=Some description, genre=[]), Game(id=9, name=Ga, description=Some description, genre=[]), Game(id=10, name=Gea, description=Some description, genre=[]), Game(id=11, name=Gea1, description=Some description, genre=[]), Game(id=12, name=Ge2a, description=Some description, genre=[]), Game(id=13, name=Gea22, description=Some description, genre=[]), Game(id=14, name=Gea32, description=Some description, genre=[])]
+2024-05-02 13:48:30.284 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-05-02 13:48:30.285 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 13:48:30.289 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-02 13:48:30.294 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-03 18:13:32.282 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.gameinfoservice.GameInfoServiceApplicationTests]: GameInfoServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-05-03 18:13:32.437 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.gameinfoservice.GameInfoServiceApplication for test class com.example.gameinfoservice.GameInfoServiceApplicationTests
+2024-05-03 18:13:33.080 [main] INFO  c.e.g.GameInfoServiceApplicationTests - Starting GameInfoServiceApplicationTests using Java 21.0.2 with PID 5254 (started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-05-03 18:13:33.081 [main] INFO  c.e.g.GameInfoServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-05-03 18:13:34.152 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-03 18:13:34.230 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
+2024-05-03 18:13:35.154 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-03 18:13:35.246 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-03 18:13:35.278 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-03 18:13:35.407 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-03 18:13:35.436 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-03 18:13:35.582 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@53a16dd6
+2024-05-03 18:13:35.584 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-03 18:13:36.260 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-03 18:13:36.353 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-03 18:13:36.366 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-05-03 18:13:36.725 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-03 18:13:38.797 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-03 18:13:39.155 [main] INFO  c.e.g.GameInfoServiceApplicationTests - Started GameInfoServiceApplicationTests in 6.445 seconds (process running for 10.26)
+2024-05-03 18:13:39.206 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-05-03 18:13:39.207 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-03 18:13:39.210 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-03 18:13:39.214 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-03 18:17:08.546 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.gameinfoservice.GameInfoServiceApplicationTests]: GameInfoServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-05-03 18:17:08.708 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.gameinfoservice.GameInfoServiceApplication for test class com.example.gameinfoservice.GameInfoServiceApplicationTests
+2024-05-03 18:17:09.187 [main] INFO  c.e.g.GameInfoServiceApplicationTests - Starting GameInfoServiceApplicationTests using Java 21.0.2 with PID 6348 (started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-05-03 18:17:09.189 [main] INFO  c.e.g.GameInfoServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-05-03 18:17:10.178 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-03 18:17:10.246 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+2024-05-03 18:17:11.169 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-03 18:17:11.247 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-03 18:17:11.288 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-03 18:17:11.405 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-03 18:17:11.433 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-03 18:17:11.607 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34ede267
+2024-05-03 18:17:11.609 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-03 18:17:12.407 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-03 18:17:12.463 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-03 18:17:12.477 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-05-03 18:17:12.826 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-03 18:17:14.838 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-03 18:17:15.192 [main] INFO  c.e.g.GameInfoServiceApplicationTests - Started GameInfoServiceApplicationTests in 6.296 seconds (process running for 9.797)
+2024-05-03 18:17:15.196 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-05-03 18:17:15.197 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-03 18:17:15.200 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-03 18:17:15.210 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-03 18:17:23.891 [main] INFO  c.e.g.GameInfoServiceApplication - Starting GameInfoServiceApplication using Java 21.0.2 with PID 6752 (/home/bobr/IdeaProjects/lab3Lab4/laba2/target/classes started by bobr in /home/bobr/IdeaProjects/lab3Lab4/laba2)
+2024-05-03 18:17:23.893 [main] INFO  c.e.g.GameInfoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-03 18:17:24.779 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-03 18:17:24.841 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2024-05-03 18:17:25.669 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-05-03 18:17:25.682 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-03 18:17:25.684 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-03 18:17:25.684 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-05-03 18:17:25.743 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-03 18:17:25.743 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1774 ms
+2024-05-03 18:17:25.967 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-03 18:17:26.023 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-03 18:17:26.058 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-03 18:17:26.312 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-03 18:17:26.341 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-03 18:17:26.505 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3bf5911d
+2024-05-03 18:17:26.507 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-03 18:17:27.577 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-03 18:17:27.661 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-03 18:17:27.676 [main] INFO  c.e.g.aspect.LoggingAspect - Aspect is initialized
+2024-05-03 18:17:28.021 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-03 18:17:29.416 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-03 18:17:29.659 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-03 18:17:29.679 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-05-03 18:17:29.687 [main] INFO  c.e.g.GameInfoServiceApplication - Started GameInfoServiceApplication in 6.2 seconds (process running for 7.038)
+2024-05-03 18:17:52.086 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-03 18:17:52.087 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-03 18:17:52.088 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-05-03 18:17:52.141 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - >> execution(List com.example.gameinfoservice.service.GameService.getAllGames()) getAllGames() - []
+
+2024-05-03 18:17:52.267 [http-nio-8080-exec-2] INFO  c.e.g.aspect.LoggingAspect - << execution(List com.example.gameinfoservice.service.GameService.getAllGames())() - [com.example.gameinfoservice.model.Game@211fb0b4, com.example.gameinfoservice.model.Game@2287ab20, com.example.gameinfoservice.model.Game@51276b64, com.example.gameinfoservice.model.Game@deea737, com.example.gameinfoservice.model.Game@706e33fd, com.example.gameinfoservice.model.Game@6405462c, com.example.gameinfoservice.model.Game@3f6bdcab, com.example.gameinfoservice.model.Game@391f84b4, com.example.gameinfoservice.model.Game@3980026a, com.example.gameinfoservice.model.Game@270338cf, com.example.gameinfoservice.model.Game@3e7c4be6, com.example.gameinfoservice.model.Game@32858a6, com.example.gameinfoservice.model.Game@6c63bb43, com.example.gameinfoservice.model.Game@eebef38]
+2024-05-03 18:17:59.606 [http-nio-8080-exec-3] INFO  c.e.g.aspect.CounterAspect - Request Counter: 1 - execution(Game com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame
+
+2024-05-03 18:17:59.606 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [com.example.gameinfoservice.model.Game@42525470]
+
+2024-05-03 18:17:59.644 [http-nio-8080-exec-3] ERROR c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.saveGame(Game))() - Game with name: Gea1already exist
+2024-05-03 18:17:59.647 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - >> execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest)) badRequestException() - [com.example.gameinfoservice.exception.BadRequestException: Game with name: Gea1already exist, ServletWebRequest: uri=/game/saveGame;client=0:0:0:0:0:0:0:1]
+
+2024-05-03 18:17:59.648 [http-nio-8080-exec-3] INFO  c.e.g.aspect.LoggingAspect - << execution(ResponseEntity com.example.gameinfoservice.exception.GlobalExceptionHandler.badRequestException(BadRequestException,WebRequest))() - <400 BAD_REQUEST Bad Request,ErrorMessage[statusCode=400, timestamp=Fri May 03 18:17:59 MSK 2024, message=Game with name: Gea1already exist, description=uri=/game/saveGame],[]>
+2024-05-03 18:18:09.623 [http-nio-8080-exec-4] INFO  c.e.g.aspect.CounterAspect - Request Counter: 2 - execution(Game com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame
+
+2024-05-03 18:18:09.623 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - >> execution(Game com.example.gameinfoservice.service.GameService.saveGame(Game)) saveGame() - [com.example.gameinfoservice.model.Game@5c27c3c8]
+
+2024-05-03 18:18:09.668 [http-nio-8080-exec-4] INFO  c.e.g.aspect.LoggingAspect - << execution(Game com.example.gameinfoservice.service.GameService.saveGame(Game))() - com.example.gameinfoservice.model.Game@5c27c3c8
+2024-05-03 18:18:53.447 [SpringApplicationShutdownHook] INFO  c.e.g.aspect.LoggingAspect - Aspect is destroyed
+2024-05-03 18:18:53.448 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-03 18:18:53.451 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-03 18:18:53.457 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

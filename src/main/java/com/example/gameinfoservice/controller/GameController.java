@@ -37,11 +37,8 @@ public class GameController {
     @PostMapping("/saveGame")
     public ResponseEntity<String> addMatch(
             @RequestBody final Game game) {
-        if (!gameService.saveGame(game)) {
-            return new ResponseEntity<>("This game is already exists", HttpStatus.BAD_REQUEST);
-        } else {
-            return new ResponseEntity<>("Game was created", HttpStatus.OK);
-        }
+        gameService.saveGame(game);
+        return new ResponseEntity<>("Game was created", HttpStatus.OK);
     }
 
     //Изаменение имени игры по id
@@ -67,6 +64,11 @@ public class GameController {
     public ResponseEntity<String> deleteGame(@RequestParam(value = "id") final Long id) {
         gameService.deleteGameById(id);
         return new ResponseEntity<>("Deleted successfully", HttpStatus.OK);
+    }
+
+    @PostMapping("/addListGames")
+    public ResponseEntity<List<Game>> addListGame(@RequestBody final List<Game> gameList){
+        return new ResponseEntity<>(gameService.addMultipleGames(gameList), HttpStatus.OK);
     }
 }
 

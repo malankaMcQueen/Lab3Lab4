@@ -15,7 +15,6 @@ import java.util.List;
 @Setter
 @Getter
 @Entity
-@Data
 public class Genre {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,5 +25,4 @@ public class Genre {
   @ManyToMany(mappedBy = "genre")
   @JsonIgnoreProperties(value = "genre")
   private List<Game> games;
-
 }
