@@ -26,7 +26,7 @@ public class GameService {
     private CacheManager cacheManager;
     private static final String GAME = "gameName_";
 
-    @AspectAnnotation
+    @RequestCounterAnnotation
     public List<Game> getAllGames() {
         List<Game> gameList = gameRepository.findAll();
         for (Game game: gameList) {
