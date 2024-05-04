@@ -38,9 +38,8 @@ class GameServiceTest {
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this);
+        MockitoAnnotations.initMocks(this);
     }
-
     @Test
     void testGetAllGames() {
         List<Game> games = new ArrayList<>();

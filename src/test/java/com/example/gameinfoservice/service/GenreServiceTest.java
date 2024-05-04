@@ -37,9 +37,8 @@ class GenreServiceTest {
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this);
+        MockitoAnnotations.initMocks(this);
     }
-
     @Test
     void testGetAllGenre() {
         List<Genre> genres = new ArrayList<>();
